@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiConferenceApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiConferenceApp"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent Title="Home" Route="home" ContentTemplate="{DataTemplate local:MainPage}" />
+    
+    <TabBar >
+        <Tab Title="Schedule">
+            <ShellContent
+                Title="Day 1"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="ScheduleDay1" />
+            <ShellContent
+                Title="Day 2"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="ScheduleDay2" />
+            <ShellContent
+                Title="Day 3"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="ScheduleDay3" />
+        </Tab>
+        <Tab Title="My Agenda">
+            <ShellContent
+                Title="Day 1"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="AgendaDay1" />
+            <ShellContent
+                Title="Day 2"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="AgendaDay2" />
+            <ShellContent
+                Title="Day 3"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="AgendaDay3" />
+        </Tab>
+        <Tab Title="Speakers">
+            <ShellContent
+                Title="Speakers"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="Speakers" />
+        </Tab>
+        <Tab Title="Sponsers">
+            <ShellContent
+                Title="Sponsors"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="Sponsors" />
+        </Tab>
+    </TabBar>
+
+    
+
+</Shell>
