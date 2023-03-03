@@ -12,41 +12,41 @@
         <Tab Title="Schedule">
             <ShellContent
                 Title="Day 1"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:SchedulePage}"
                 Route="ScheduleDay1" />
             <ShellContent
                 Title="Day 2"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:SchedulePage}"
                 Route="ScheduleDay2" />
             <ShellContent
                 Title="Day 3"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:SchedulePage}"
                 Route="ScheduleDay3" />
         </Tab>
         <Tab Title="My Agenda">
             <ShellContent
                 Title="Day 1"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:AgendaPage}"
                 Route="AgendaDay1" />
             <ShellContent
                 Title="Day 2"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:AgendaPage}"
                 Route="AgendaDay2" />
             <ShellContent
                 Title="Day 3"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:AgendaPage}"
                 Route="AgendaDay3" />
         </Tab>
         <Tab Title="Speakers">
             <ShellContent
                 Title="Speakers"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:SpeakersPage}"
                 Route="Speakers" />
         </Tab>
-        <Tab Title="Sponsers">
+        <Tab Title="Sponsors">
             <ShellContent
                 Title="Sponsors"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate local:SponsorsPage}"
                 Route="Sponsors" />
         </Tab>
     </TabBar>
