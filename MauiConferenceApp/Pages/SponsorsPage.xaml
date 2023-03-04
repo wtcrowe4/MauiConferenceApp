@@ -2,12 +2,13 @@
 <ContentPage x:Class="MauiConferenceApp.Pages.SponsorsPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MauiConferenceApp.Pages">
+             xmlns:local="clr-namespace:MauiConferenceApp.Pages"
+             Title="Sponsors">
     <ContentPage.Content>
         <Grid>
             <Label Text="Welcome to .NET MAUI!!!"
                    HorizontalOptions="Center"
-                   TextColor="Purple"
+                   TextColor="LightBlue"
                    VerticalOptions="Center"/>
         </Grid>
     </ContentPage.Content>
