@@ -5,6 +5,8 @@
              Title="Welcome">
                 
 
+    
+    
     <!--Create a welcome splash page for my conference app-->
     <StackLayout 
         VerticalOptions="Center"
