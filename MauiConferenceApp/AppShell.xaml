@@ -10,11 +10,14 @@
 
     
     
-    <TabBar >
-        <Tab Title="Home">
-            <ShellContent Title="Home" Route="home" ContentTemplate="{DataTemplate local:MainPage}" />
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent 
+                Title="Home" 
+                Route="Home" 
+                ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab Title="Schedule">
+        <Tab Title="Schedule" Icon="schedule.png">
             <ShellContent
                 Title="Day 1"
                 ContentTemplate="{DataTemplate pages:SchedulePage}"
@@ -28,7 +31,7 @@
                 ContentTemplate="{DataTemplate pages:SchedulePage}"
                 Route="ScheduleDay3" />
         </Tab>
-        <Tab Title="My Agenda">
+        <Tab Title="My Agenda" Icon="agenda.png">
             <ShellContent
                 Title="Day 1"
                 ContentTemplate="{DataTemplate pages:AgendaPage}"
@@ -42,13 +45,13 @@
                 ContentTemplate="{DataTemplate pages:AgendaPage}"
                 Route="AgendaDay3" />
         </Tab>
-        <Tab Title="Speakers">
+        <Tab Title="Speakers" Icon="speaker.png">
             <ShellContent
                 Title="Speakers"
                 ContentTemplate="{DataTemplate pages:SpeakersPage}"
                 Route="Speakers" />
         </Tab>
-        <Tab Title="Sponsors">
+        <Tab Title="Sponsors" Icon="sponsor.png">
             <ShellContent
                 Title="Sponsors"
                 ContentTemplate="{DataTemplate pages:SponsorsPage}"

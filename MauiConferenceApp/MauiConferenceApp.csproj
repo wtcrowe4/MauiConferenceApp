@@ -49,6 +49,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\conference.avif" />
+	  <MauiImage Remove="Resources\Images\house-chimney-solid.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\agenda.svg" />
+	  <None Remove="Resources\Images\conference.avif" />
+	  <None Remove="Resources\Images\home.svg" />
+	  <None Remove="Resources\Images\house-chimney-solid.svg" />
+	  <None Remove="Resources\Images\schedule.svg" />
+	  <None Remove="Resources\Images\skyline.jpg" />
+	  <None Remove="Resources\Images\speaker.svg" />
+	  <None Remove="Resources\Images\sponsor.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 

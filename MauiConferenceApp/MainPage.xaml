@@ -12,10 +12,17 @@
         VerticalOptions="Center"
         HorizontalOptions="Center"
         Padding="10">
-        
+
+        <Image Source="skyline.jpg" 
+               HeightRequest="400" />
+
         <Label 
             Text="Welcome to the Maui Conference App!" 
-            FontSize="25"   />
+            FontSize="25" 
+            HorizontalOptions="Center"
+            Margin="20" />
+        <!--TextColor="{AppThemeBinding Default={StaticResource Gold}}"-->
+            
 
         <!--<Image Source="" />-->
     </StackLayout>
