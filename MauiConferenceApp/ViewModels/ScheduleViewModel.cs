@@ -1,31 +1,18 @@
 ﻿namespace MauiConferenceApp.ViewModels
 {
-    
-    public class AgendaDay1ViewModel : AgendaViewModel
-    {
-        public AgendaDay1ViewModel() { Day = 1; }
-    }
-    public class AgendaDay2ViewModel : AgendaViewModel
-    {
-        public AgendaDay2ViewModel() { Day = 2; }
-    }
-    public class AgendaDay3ViewModel : AgendaViewModel
-    {
-        public AgendaDay3ViewModel() { Day = 3; }
-    }
 
-    public partial class AgendaViewModel : ObservableObject
+    public partial class ScheduleViewModel : ObservableObject
     {
         public int Day { get; set; }
-        
-        public ObservableRangeCollection<Grouping<string, Session>> Agenda { get; } = new();
-        
-        public AgendaViewModel() 
+        public ObservableRangeCollection<Grouping<string, Session>> Schedule { get; } = new();
+        Random random = new();
+
+        public ScheduleViewModel() 
         { 
         
         }
         [RelayCommand]
-        Task LoadDataAsync()
+        public Task LoadDataAsync()
         {
             //Dummy Data
             var sessionCount = new[] { 1, 2, 4, 4, 4, 4, 4 };
@@ -33,12 +20,13 @@
             foreach(var i in sessionCount)
             {
                 AddItems(sessionCount[i], i);
-                //var sorted = from session in sessions
-                //             orderby session.Id
-                //             group session by sessionCount[i] into sessionGroup
-                //             select new Grouping<string, Session>(sessionGroup.Key, sessionGroup);
-                //Agenda.AddRange(sorted);
-                Agenda.AddRange((IEnumerable<Grouping<string, Session>>)sessions[i]);
+                //This will eventually sort by time, dummy data has same start time.
+                var sorted = from session in sessions
+                             orderby session.StartTime
+                             group session by session.StartTimeDisplay into sessionGroup
+                             select new Grouping<string, Session>(sessionGroup.Key, sessionGroup);
+                
+                Schedule.AddRange(sorted);
             }
 
             return Task.CompletedTask;
@@ -63,3 +51,16 @@
 
     }
 }
+
+
+//public class ScheduleDay1ViewModel : ScheduleViewModel
+//{
+//    public ScheduleDay1ViewModel() { Day = 1; }
+//}
+//public class ScheduleDay2ViewModel : ScheduleViewModel
+//{
+//    public ScheduleDay2ViewModel() { Day = 2; }
+//}
+//public class ScheduleDay3ViewModel : ScheduleViewModel
+//{
+//    public ScheduleDay3ViewModel() { Day = 3; }

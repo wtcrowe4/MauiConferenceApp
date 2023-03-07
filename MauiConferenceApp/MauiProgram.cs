@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiConferenceApp.Pages;
+using Microsoft.Extensions.Logging;
 
 namespace MauiConferenceApp;
 
@@ -15,6 +16,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+		builder.Services.AddTransient<SchedulePage>();
+		builder.Services.AddTransient<ScheduleViewModel>();
 		
 
 #if DEBUG
