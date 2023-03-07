@@ -59,13 +59,16 @@
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\house-chimney-solid.svg" />
 	  <None Remove="Resources\Images\schedule.svg" />
+	  <None Remove="Resources\Images\settings.svg" />
 	  <None Remove="Resources\Images\skyline.jpg" />
 	  <None Remove="Resources\Images\speaker.svg" />
 	  <None Remove="Resources\Images\sponsor.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
 	</ItemGroup>
 
 	<ItemGroup>
