@@ -1,4 +1,7 @@
 ﻿using Microsoft.Maui.Controls;
+using MauiConferenceApp.ViewModels;
+using System.Diagnostics;
+
 namespace MauiConferenceApp.Pages;
 public partial class ScheduleDay1Page : SchedulePage
 {
@@ -34,15 +37,17 @@ public partial class SchedulePage : ContentPage
     public SchedulePage()
     {
         InitializeComponent();
+        
+        
     }
     protected override async void OnAppearing()
     {
         base.OnAppearing();
         //System.NullReferenceException: 'Object reference not set to an instance of an object.'
         //MauiConferenceApp.Pages.SchedulePage.VM.get returned null.
-        if (VM.Schedule.Count == 0)
-            await VM.LoadDataAsync();
-            //await VM.LoadDataCommand.ExecuteAsync();
+        if (vm.Schedule.Count == 0)
+            //await VM.LoadDataAsync();
+            await vm.LoadDataCommand.ExecuteAsync(null);
     }
 
     protected override void OnNavigatedTo(NavigatedToEventArgs args)

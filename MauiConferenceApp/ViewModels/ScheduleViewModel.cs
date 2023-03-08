@@ -1,6 +1,9 @@
-﻿namespace MauiConferenceApp.ViewModels
-{
+﻿using CommunityToolkit.Mvvm.Input;
+using MvvmHelpers;
+using MauiConferenceApp.Models;
 
+namespace MauiConferenceApp.ViewModels
+{
     public partial class ScheduleViewModel : ObservableObject
     {
         public int Day { get; set; }
@@ -11,6 +14,7 @@
         { 
         
         }
+        
         [RelayCommand]
         public Task LoadDataAsync()
         {
